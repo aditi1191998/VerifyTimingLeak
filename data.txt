@@ -6,9 +6,9 @@ const int LAST_ADDR = 2048;
 /* Number of cores. */
 const int CORE_COUNT = 1;
 /* Number of cache lines found in each cache */
-const int LINES_PER_CACHE = 3;
+const int LINES_PER_CACHE = 70;
 /* Number of components in the system */
-const int COMPONENT_COUNT = 16;
+const int COMPONENT_COUNT = 4;
 const bool USE_LOCK_FREE_CACHES = true;
 /******************************************************************************/
 /** Types *********************************************************************/
@@ -752,190 +752,7 @@ int current_max_calc_time;
 int current_min_calc_time;
 int received_acks = 0;
 /**** Programs ****************************************************************/
-const program_line_t program_0 [7] =
-   {
-      {INSTR_LOAD,    1, 0, 0},
-      {INSTR_LOAD,    2, 0, 0},
-      {INSTR_STORE,   3, 0, 0},
-      {INSTR_LOAD,    3, 0, 0},
-      {INSTR_STORE,   1, 0, 0},
-      {INSTR_EVICT,   1, 0, 0},
-      {INSTR_END,     0, 0, 0}
-   };
-const program_line_t program_101 [7] =
-   {
-      {INSTR_LOAD,    4, 0, 0},
-      {INSTR_LOAD,    5, 0, 0},
-      {INSTR_STORE,   6, 0, 0},
-      {INSTR_LOAD,    6, 0, 0},
-      {INSTR_STORE,   4, 0, 0},
-      {INSTR_EVICT,   4, 0, 0},
-      {INSTR_END,     0, 0, 0}
-   };
-const program_line_t program_200 [11] =
-   {
-      {INSTR_STORE,   1, 0, 0},
-      {INSTR_STORE,   2, 0, 0},
-      {INSTR_LOAD,    1, 0, 0},
-      {INSTR_STORE,   1, 0, 0},
-//      {INSTR_CALC,    0, 200, 300},
-      {INSTR_LOAD,    2, 0, 0},
-      {INSTR_STORE,   2, 0, 0},
-      {INSTR_LOAD,    1, 0, 0},
-      {INSTR_STORE,   1, 0, 0},
-      {INSTR_LOAD,    2, 0, 0},
-      {INSTR_STORE,   2, 0, 0},
-      {INSTR_END,     0, 0, 0}
-   };
-const program_line_t program_201 [11] =
-   {
-      {INSTR_STORE,   3, 0, 0},
-      {INSTR_STORE,   4, 0, 0},
-      {INSTR_LOAD,    3, 0, 0},
-      {INSTR_STORE,   3, 0, 0},
-      {INSTR_LOAD,    4, 0, 0},
-      {INSTR_STORE,   4, 0, 0},
-      {INSTR_LOAD,    3, 0, 0},
-      {INSTR_STORE,   3, 0, 0},
-      {INSTR_LOAD,    4, 0, 0},
-      {INSTR_STORE,   4, 0, 0},
-      {INSTR_END,     0, 0, 0}
-   };
-const program_line_t program_102 [7] =
-   {
-      {INSTR_LOAD,    7, 0, 0},
-      {INSTR_LOAD,    8, 0, 0},
-      {INSTR_STORE,   9, 0, 0},
-      {INSTR_LOAD,    9, 0, 0},
-      {INSTR_STORE,   7, 0, 0},
-      {INSTR_EVICT,   7, 0, 0},
-      {INSTR_END,     0, 0, 0}
-   };
-const program_line_t program_103 [7] =
-   {
-      {INSTR_LOAD,    10, 0, 0},
-      {INSTR_LOAD,    11, 0, 0},
-      {INSTR_STORE,   12, 0, 0},
-      {INSTR_LOAD,    12, 0, 0},
-      {INSTR_STORE,   10, 0, 0},
-      {INSTR_EVICT,   10, 0, 0},
-      {INSTR_END,     0, 0, 0}
-   };
-const program_line_t program_1 [10] =
-   {
-      {INSTR_STORE,   1, 0, 0},
-      {INSTR_LOAD,    1, 0, 0},
-      {INSTR_EVICT,   1, 0, 0},
-      {INSTR_END,     0, 0, 0},
-      {INSTR_LOAD,    4, 0, 0},
-//      {INSTR_LOAD,    3, 0, 0},
-      {INSTR_LOAD,    1, 0, 0},
-      {INSTR_STORE,   2, 0, 0},
-      {INSTR_STORE,   1, 0, 0},
-      {INSTR_EVICT,   2, 0, 0},
-      {INSTR_END,     0, 0, 0}
-   };
-const program_line_t program_2 [10] =
-   {
-      {INSTR_LOAD,   1, 0, 0},
-      {INSTR_LOAD,   2, 0, 0},
-      {INSTR_LOAD,   3, 0, 0},
-      {INSTR_LOAD,   4, 0, 0},
-      {INSTR_LOAD,   5, 0, 0},
-      {INSTR_LOAD,   2, 0, 0},
-      {INSTR_LOAD,   4, 0, 0},
-      {INSTR_LOAD,   5, 0, 0},
-      {INSTR_LOAD,   1, 0, 0},
-      {INSTR_END,     0, 0, 0}
-   };
-const program_line_t program_3 [10] =
-   {
-      {INSTR_STORE,    1, 0, 0},
-      {INSTR_STORE,    2, 0, 0},
-      {INSTR_STORE,    3, 0, 0},
-      {INSTR_STORE,    4, 0, 0},
-      {INSTR_STORE,    5, 0, 0},
-      {INSTR_STORE,   2, 0, 0},
-      {INSTR_STORE,   4, 0, 0},
-      {INSTR_STORE,   5, 0, 0},
-      {INSTR_STORE,   1, 0, 0},
-      {INSTR_END,     0, 0, 0}
-   };
-const program_line_t program_4 [1] =
-   {
-      {INSTR_END,     0, 0, 0}
-   };
-const program_line_t program_10 [3] =
-   // Tests load and trivial evict
-   {
-      {INSTR_LOAD, 1, 0, 0}, // 1 RAM_READ_TIME
-      {INSTR_EVICT, 1, 0, 0},
-      {INSTR_END, 0, 0, 0}
-   };
-   // Total: 1 RAM_READ_TIME
-const program_line_t program_11 [5] =
-   {
-      {INSTR_STORE, 1, 0, 0}, // 1 RAM_READ_TIME*
-      {INSTR_LOAD, 1, 0, 0},
-      {INSTR_EVICT, 1, 0, 0},
-      {INSTR_LOAD, 1, 0, 0}, // 1 RAM_WRITE_TIME
-      {INSTR_END, 0, 0, 0}
-   };
-   // Total: 1 RAM_READ_TIME + 1 RAM_WRITE_TIME
-const program_line_t program_12 [5] =
-   // Tests that addresses don't get mixed up when validating existing
-   {
-      {INSTR_STORE, 1, 0, 0}, // 1 RAM_READ_TIME*
-      {INSTR_LOAD, 2, 0, 0}, // 1 RAM_READ_TIME
-      {INSTR_LOAD, 1, 0, 0},
-      {INSTR_STORE, 2, 0, 0}, // 1 RAM_READ_TIME
-      {INSTR_END, 0, 0, 0}
-   };
-   // Total: 3 RAM_READ_TIME
-const program_line_t program_13 [5] =
-   {
-      {INSTR_LOAD, 1, 0, 0}, // 1 RAM_READ_TIME
-      {INSTR_LOAD, 2, 0, 0}, // 1 RAM_READ_TIME
-      {INSTR_LOAD, 3, 0, 0}, // 1 RAM_READ_TIME
-      {INSTR_LOAD, 1, 0, 0},
-      {INSTR_END, 0, 0, 0}
-   };
-   // Total: 3 RAM_READ_TIME
-const program_line_t program_14 [8] =
-   {
-      {INSTR_LOAD, 1, 0, 0}, // 1 RAM_READ_TIME
-      {INSTR_LOAD, 2, 0, 0}, // 1 RAM_READ_TIME
-      {INSTR_LOAD, 3, 0, 0}, // 1 RAM_READ_TIME
-      {INSTR_LOAD, 4, 0, 0}, // 1 RAM_READ_TIME
-      {INSTR_LOAD, 1, 0, 0}, // 0: Available as soon as the first req is completed,
-                       // which is before the cache is full.
-      {INSTR_LOAD, 3, 0, 0},
-      {INSTR_LOAD, 4, 0, 0},
-      {INSTR_END, 0, 0, 0}
-   };
-   // 5 RAM_READ_TIME
-const program_line_t program_15 [11] =
-   {
-      {INSTR_LOAD, 1, 0, 0}, // 1 RAM_READ_TIME
-      {INSTR_LOAD, 2, 0, 0}, // 1 RAM_READ_TIME
-      {INSTR_LOAD, 3, 0, 0}, // 1 RAM_READ_TIME
-      {INSTR_LOAD, 4, 0, 0}, // 1 RAM_READ_TIME. @1 evicted
-      {INSTR_STORE, 2, 0, 0}, // 1 RAM_READ_TIME*
-      {INSTR_STORE, 3, 0, 0}, // 1 RAM_READ_TIME*
-      {INSTR_STORE, 4, 0, 0}, // 1 RAM_READ_TIME*
-      {INSTR_LOAD, 1, 0, 0},
-      {INSTR_LOAD, 3, 0, 0},
-      {INSTR_LOAD, 4, 0, 0},
-      {INSTR_END, 0, 0, 0}
-   };
-const program_line_t program_16 [4] =
-   {
-      {INSTR_LOAD, 1, 0, 0}, // 1 RAM_READ_TIME
-      {INSTR_STORE, 1, 0, 0}, // 1 RAM_READ_TIME
-      {INSTR_EVICT, 1, 0, 0}, // 1 RAM_WRITE_TIME
-      {INSTR_END, 0, 0, 0}
-   };
-   // 2 RAM_READ_TIME + 1 RAM_WRITE_TIME
+
 /******************************************************************************/
 /** Local Functions ***********************************************************/
 /******************************************************************************/
@@ -982,81 +799,7 @@ instr_id_t cmd_to_instr (const cmd_id_t cmd)
    }
 }
 /* Returns the current program line for this automaton. */
-program_line_t get_current_program_line ()
-{
-   if (PROGRAM == 0)
-   {
-      return program_0[program_counter];
-   }
-   else if (PROGRAM == 1)
-   {
-      return program_1[program_counter];
-   }
-   else if (PROGRAM == 2)
-   {
-      return program_2[program_counter];
-   }
-   else if (PROGRAM == 3)
-   {
-      return program_3[program_counter];
-   }
-   else if (PROGRAM == 4)
-   {
-      return program_4[program_counter];
-   }
-   else if (PROGRAM == 10)
-   {
-      return program_10[program_counter];
-   }
-   else if (PROGRAM == 11)
-   {
-      return program_11[program_counter];
-   }
-   else if (PROGRAM == 12)
-   {
-      return program_12[program_counter];
-   }
-   else if (PROGRAM == 13)
-   {
-      return program_13[program_counter];
-   }
-   else if (PROGRAM == 14)
-   {
-      return program_14[program_counter];
-   }
-   else if (PROGRAM == 15)
-   {
-      return program_15[program_counter];
-   }
-   else if (PROGRAM == 16)
-   {
-      return program_16[program_counter];
-   }
-   else if (PROGRAM == 101)
-   {
-      return program_101[program_counter];
-   }
-   else if (PROGRAM == 102)
-   {
-      return program_102[program_counter];
-   }
-   else if (PROGRAM == 103)
-   {
-      return program_103[program_counter];
-   }
-   else if (PROGRAM == 200)
-   {
-      return program_200[program_counter];
-   }
-   else if (PROGRAM == 201)
-   {
-      return program_201[program_counter];
-   }
-   else
-   {
-      return program_202[program_counter];
-   }
-}
+
 /******************************************************************************/
 /** Transition Functions ******************************************************/
 /******************************************************************************/
@@ -2532,21 +2275,11 @@ Coherency0 = CoherencyMGR(1, 2);
 // constant in the system declaration.
 // Also ensure that the value of COMPONENT_COUNT is higher than the highest
 // ID you attributed.
-CCTRL0 = MSICacheCTRL(3, 2); QFIO0 = QueryFIFO(3); DFIFO0 = DataFIFO(3);
-CCTRL1 = MSICacheCTRL(4, 2); QFIO1 = QueryFIFO(4); DFIFO1 = DataFIFO(4);
-CCTRL2 = MSICacheCTRL(5, 2); QFIO2 = QueryFIFO(5); DFIFO2 = DataFIFO(5);
-CCTRL3 = MSICacheCTRL(6, 2); QFIO3 = QueryFIFO(6); DFIFO3 = DataFIFO(6);
 // Cores
 // Each line is: (ID, CACHE_ID, PROGRAM_ID)
 // Programs can be found in the Core template's declaration.
-Test0a = Core(1, 3, 202);
-//Test1a = Core(10, 4, 200);
-//Test2a = Core(11, 5, 200);
-//Test3a = Core(12, 6, 200);
+CCTRL0 = MSICacheCTRL(3, 2); QFIO0 = QueryFIFO(3); DFIFO0 = DataFIFO( 3);
+Test0a = Core(1,3,0 );
 system
-        DFIFO0, CCTRL0, QFIO0, Test0a,
-//        DFIFO1, CCTRL1, QFIO1, Test1a,
-//        DFIFO2, CCTRL2, QFIO2, Test2a,
-//        DFIFO3, CCTRL3, QFIO3, Test3a,
-        QBus0, Mem0, DFIFOMem, Coherency0, UrgentHandler
-        ;
+ DFIFO0, CCTRL0, QFIO0, Test0a,
+QBus0, Mem0, DFIFOMem, Coherency0, UrgentHandler;
