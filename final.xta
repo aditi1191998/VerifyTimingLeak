@@ -751,7 +751,51 @@ program_line_t current_program_line;
 int current_max_calc_time;
 int current_min_calc_time;
 int received_acks = 0;
-/**** Programs ****************************************************************/
+
+const program_line_t program_0 [33] =
+{
+{INSTR_LOAD, 1080, 0, 0},
+{INSTR_LOAD, 1256, 0, 0},
+{INSTR_LOAD, 1081, 0, 0},
+{INSTR_LOAD, 1192, 0, 0},
+{INSTR_LOAD, 1082, 0, 0},
+{INSTR_LOAD, 1112, 0, 0},
+{INSTR_LOAD, 1083, 0, 0},
+{INSTR_LOAD, 1096, 0, 0},
+{INSTR_LOAD, 1084, 0, 0},
+{INSTR_LOAD, 1119, 0, 0},
+{INSTR_LOAD, 1085, 0, 0},
+{INSTR_LOAD, 1196, 0, 0},
+{INSTR_LOAD, 1086, 0, 0},
+{INSTR_LOAD, 1102, 0, 0},
+{INSTR_LOAD, 1087, 0, 0},
+{INSTR_LOAD, 1176, 0, 0},
+{INSTR_LOAD, 1088, 0, 0},
+{INSTR_LOAD, 1160, 0, 0},
+{INSTR_LOAD, 1089, 0, 0},
+{INSTR_LOAD, 1012, 0, 0},
+{INSTR_LOAD, 1090, 0, 0},
+{INSTR_LOAD, 1296, 0, 0},
+{INSTR_LOAD, 1091, 0, 0},
+{INSTR_LOAD, 1396, 0, 0},
+{INSTR_LOAD, 1092, 0, 0},
+{INSTR_LOAD, 1224, 0, 0},
+{INSTR_LOAD, 1093, 0, 0},
+{INSTR_LOAD, 1110, 0, 0},
+{INSTR_LOAD, 1094, 0, 0},
+{INSTR_LOAD, 1128, 0, 0},
+{INSTR_LOAD, 1095, 0, 0},
+{INSTR_LOAD, 1002, 0, 0},
+{INSTR_END,0, 0, 0}
+};
+program_line_t get_current_program_line ()
+{
+ if (PROGRAM == 0)
+ {
+ return program_0[program_counter];
+ }
+return program_0[program_counter];
+}
 
 /******************************************************************************/
 /** Local Functions ***********************************************************/
@@ -2283,3 +2327,4 @@ Test0a = Core(1,3,0 );
 system
  DFIFO0, CCTRL0, QFIO0, Test0a,
 QBus0, Mem0, DFIFOMem, Coherency0, UrgentHandler;
+
