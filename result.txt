@@ -1,0 +1,166 @@
+Options for the verification:
+  Generating no trace
+  Search order is breadth first
+  Using conservative space optimisation
+  Seed is 1629480913
+  State space representation uses minimal constraint systems
+[2K
+Verifying formula 1 at query.q:1
+[2K -- Formula is satisfied.
+sup{!Test0a.Terminated}:
+CCTRL0.list[0] <= 0
+[2K
+Verifying formula 2 at query.q:2
+[2K -- Formula is satisfied.
+sup{!Test0a.Terminated}:
+CCTRL0.list[1] <= 0
+[2K
+Verifying formula 3 at query.q:3
+[2K -- Formula is satisfied.
+sup{!Test0a.Terminated}:
+CCTRL0.list[2] <= 0
+[2K
+Verifying formula 4 at query.q:4
+[2K -- Formula is satisfied.
+sup{!Test0a.Terminated}:
+CCTRL0.list[3] <= 0
+[2K
+Verifying formula 5 at query.q:5
+[2K -- Formula is satisfied.
+sup{!Test0a.Terminated}:
+CCTRL0.list[4] <= 0
+[2K
+Verifying formula 6 at query.q:6
+[2K -- Formula is satisfied.
+sup{!Test0a.Terminated}:
+CCTRL0.list[5] <= 0
+[2K
+Verifying formula 7 at query.q:7
+[2K -- Formula is satisfied.
+sup{!Test0a.Terminated}:
+CCTRL0.list[6] <= 0
+[2K
+Verifying formula 8 at query.q:8
+[2K -- Formula is satisfied.
+sup{!Test0a.Terminated}:
+CCTRL0.list[7] <= 0
+[2K
+Verifying formula 9 at query.q:9
+ -- Throughput: 385 states/sec, Load: 0 states[K[2K -- Formula is satisfied.
+sup{!Test0a.Terminated}:
+CCTRL0.list[8] <= 0
+[2K
+Verifying formula 10 at query.q:10
+ -- Throughput: 345 states/sec, Load: 0 states[K[2K -- Formula is satisfied.
+sup{!Test0a.Terminated}:
+CCTRL0.list[9] <= 0
+[2K
+Verifying formula 11 at query.q:11
+ -- Throughput: 312 states/sec, Load: 0 states[K[2K -- Formula is satisfied.
+sup{!Test0a.Terminated}:
+CCTRL0.list[10] <= 0
+[2K
+Verifying formula 12 at query.q:12
+ -- Throughput: 285 states/sec, Load: 0 states[K[2K -- Formula is satisfied.
+sup{!Test0a.Terminated}:
+CCTRL0.list[11] <= 0
+[2K
+Verifying formula 13 at query.q:13
+ -- Throughput: 263 states/sec, Load: 0 states[K[2K -- Formula is satisfied.
+sup{!Test0a.Terminated}:
+CCTRL0.list[12] <= 0
+[2K
+Verifying formula 14 at query.q:14
+ -- Throughput: 243 states/sec, Load: 0 states[K[2K -- Formula is satisfied.
+sup{!Test0a.Terminated}:
+CCTRL0.list[13] <= 0
+[2K
+Verifying formula 15 at query.q:15
+ -- Throughput: 226 states/sec, Load: 0 states[K[2K -- Formula is satisfied.
+sup{!Test0a.Terminated}:
+CCTRL0.list[14] <= 0
+[2K
+Verifying formula 16 at query.q:16
+ -- Throughput: 212 states/sec, Load: 0 states[K[2K -- Formula is satisfied.
+sup{!Test0a.Terminated}:
+CCTRL0.list[15] <= 0
+[2K
+Verifying formula 17 at query.q:17
+ -- Throughput: 199 states/sec, Load: 0 states[K[2K -- Formula is satisfied.
+sup{!Test0a.Terminated}:
+CCTRL0.list[16] <= 0
+[2K
+Verifying formula 18 at query.q:18
+ -- Throughput: 188 states/sec, Load: 0 states[K[2K -- Formula is satisfied.
+sup{!Test0a.Terminated}:
+CCTRL0.list[17] <= 0
+[2K
+Verifying formula 19 at query.q:19
+ -- Throughput: 177 states/sec, Load: 0 states[K[2K -- Formula is satisfied.
+sup{!Test0a.Terminated}:
+CCTRL0.list[18] <= 0
+[2K
+Verifying formula 20 at query.q:20
+ -- Throughput: 168 states/sec, Load: 0 states[K[2K -- Formula is satisfied.
+sup{!Test0a.Terminated}:
+CCTRL0.list[19] <= 0
+[2K
+Verifying formula 21 at query.q:21
+ -- Throughput: 160 states/sec, Load: 0 states[K[2K -- Formula is satisfied.
+sup{!Test0a.Terminated}:
+CCTRL0.list[20] <= 0
+[2K
+Verifying formula 22 at query.q:22
+ -- Throughput: 153 states/sec, Load: 0 states[K[2K -- Formula is satisfied.
+sup{!Test0a.Terminated}:
+CCTRL0.list[21] <= 0
+[2K
+Verifying formula 23 at query.q:23
+ -- Throughput: 146 states/sec, Load: 0 states[K[2K -- Formula is satisfied.
+sup{!Test0a.Terminated}:
+CCTRL0.list[22] <= 0
+[2K
+Verifying formula 24 at query.q:24
+ -- Throughput: 140 states/sec, Load: 0 states[K[2K -- Formula is satisfied.
+sup{!Test0a.Terminated}:
+CCTRL0.list[23] <= 0
+[2K
+Verifying formula 25 at query.q:25
+ -- Throughput: 134 states/sec, Load: 0 states[K[2K -- Formula is satisfied.
+sup{!Test0a.Terminated}:
+CCTRL0.list[24] <= 0
+[2K
+Verifying formula 26 at query.q:26
+ -- Throughput: 128 states/sec, Load: 0 states[K[2K -- Formula is satisfied.
+sup{!Test0a.Terminated}:
+CCTRL0.list[25] <= 0
+[2K
+Verifying formula 27 at query.q:27
+ -- Throughput: 123 states/sec, Load: 0 states[K[2K -- Formula is satisfied.
+sup{!Test0a.Terminated}:
+CCTRL0.list[26] <= 0
+[2K
+Verifying formula 28 at query.q:28
+ -- Throughput: 118 states/sec, Load: 0 states[K[2K -- Formula is satisfied.
+sup{!Test0a.Terminated}:
+CCTRL0.list[27] <= 0
+[2K
+Verifying formula 29 at query.q:29
+ -- Throughput: 114 states/sec, Load: 0 states[K[2K -- Formula is satisfied.
+sup{!Test0a.Terminated}:
+CCTRL0.list[28] <= 0
+[2K
+Verifying formula 30 at query.q:30
+ -- Throughput: 110 states/sec, Load: 0 states[K[2K -- Formula is satisfied.
+sup{!Test0a.Terminated}:
+CCTRL0.list[29] <= 0
+[2K
+Verifying formula 31 at query.q:31
+ -- Throughput: 106 states/sec, Load: 0 states[K[2K -- Formula is satisfied.
+sup{!Test0a.Terminated}:
+CCTRL0.list[30] <= 0
+[2K
+Verifying formula 32 at query.q:32
+ -- Throughput: 103 states/sec, Load: 0 states[K[2K -- Formula is satisfied.
+sup{!Test0a.Terminated}:
+CCTRL0.list[31] <= 0
